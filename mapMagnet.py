@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 latR = 100
 lonR = 100
-ano=1999
+ano = 1999 #alterar o ano altera o mapa
 
 lat = np.linspace(-90, 90, latR)
 lon = np.linspace(-180, 180, lonR)#240,390
@@ -19,7 +19,7 @@ for lat0 in range(0,latR):
 
 plt.figure(figsize=(20,4))
 plt.contourf(lon,lat,mag, levels=15, cmap='gist_ncar')
-cb=plt.colorbar()
+cb = plt.colorbar()
 cb.set_label('nT')
 plt.title('Anomalia magnética do Atlântico Sul ({})'.format(ano))
 plt.axis([-180, 180, -90, 90])
